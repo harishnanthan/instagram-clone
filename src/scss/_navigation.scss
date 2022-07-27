@@ -12,7 +12,8 @@ nav {
         align-items: center;
 
         .nav_logo {
-            max-width: 100px;
+            width: 100px;
+            // object-fit: cover;
         }
 
         .nav_search {
