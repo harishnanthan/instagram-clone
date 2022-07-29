@@ -1,0 +1,25 @@
+.createpost {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100vw;
+    height: 100vh;
+    background-color: $--color-black-opacity;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .createpost--close {
+        position:absolute;
+        top: 5%;
+        right: 5%;
+    }
+
+    .createpost__center {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        background-color: $--color-gray-background;
+        padding: 1em;
+    }
+}

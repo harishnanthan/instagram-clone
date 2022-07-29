@@ -1,6 +1,6 @@
-import { useDispatch, useSelector } from "react-redux";
+// import { useDispatch, useSelector } from "react-redux";
 import { Route, Routes } from "react-router-dom";
-import { memo } from "react";
+// import { memo } from "react";
 
 import Home from "./components/Home";
 
@@ -17,4 +17,4 @@ function App() {
   );
 }
 
-export default memo(App);
+export default App;

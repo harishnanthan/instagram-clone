@@ -2,20 +2,25 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import FeedCard from './FeedCard'
+// import { MemoizedFeedCard } from '../components/FeedCard'
+import AddPost from './AddPost'
 import SuggestionUser from './SuggestionUser'
 import User from './User'
 
 export default function Feed() {
 
-    const arrayForUser = [1, 2, 3, 4, 5]
-
     const data = useSelector(state => state.post)
+    // console.log(alldata)
     console.log(data)
+    const arrayForUser = [1, 2, 3]
+
+    console.log("rendered")
 
     return (
         <div className='feed'>
             <div className='feed_left'>
-                <div className='stories'></div>
+                {/* <div className='stories'></div> */}
+                <AddPost/>
                 <div className='feed_contents'>
                     {
                         data.map((el,index) => (

@@ -94,6 +94,10 @@
                         padding: .3em 0;
                         font-size: .875rem;
                         color: $--color-gray-or-text;
+                        .comments{
+                            color: $--color-black;
+                            padding: .2em;
+                        }
                     }
 
                     .time {
@@ -124,7 +128,10 @@
                             position: absolute;
                         }
 
-                        a {
+                        button {
+                            outline: none;
+                            background-color: transparent;
+                            border: none;
                             text-decoration: none;
                             font-size: 0.75rem;
                             font-weight: 600;

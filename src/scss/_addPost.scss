@@ -1,0 +1,17 @@
+.addpost{
+    width: 50%;
+    margin: 1em auto ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // background-color: red;
+
+    button{
+        padding: .7em 3em;
+        background-color: $--color-blue-link-active;
+        border: 1px solid lightgray;
+        border-radius: 8px;
+        color: $--color-white;
+        font-weight: 600;
+    }
+}
