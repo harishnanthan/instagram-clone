@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useDispatch } from 'react-redux';
 import { CREATEPOST } from '../redux/actions/postActions';
 import {ReactComponent as CloseIcon} from "../assets/svg/close.svg";
+import { HIDECREATEPOST } from '../redux/actions/postCreateAction';
 function CreatePost() {
 
     const dispatch = useDispatch()
@@ -29,13 +30,14 @@ function CreatePost() {
     const submitHandler = e => {
         e.preventDefault();
         dispatch(CREATEPOST(formData.desc, file))
+        dispatch(HIDECREATEPOST())
     }
 
 
     return (
         <div className='createpost'>
             <div className='createpost--close'>
-                <CloseIcon/>
+                <CloseIcon onClick={() => dispatch(HIDECREATEPOST())}/>
             </div>
             <form onSubmit={submitHandler} className='createpost__center'>
                 <input type="file" name='post' onChange={changeImageHandler}/>

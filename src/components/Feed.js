@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import FeedCard from './FeedCard'
@@ -10,14 +10,15 @@ import User from './User'
 export default function Feed() {
 
     const data = useSelector(state => state.post)
-    // console.log(alldata)
     console.log(data)
+
     const arrayForUser = [1, 2, 3]
 
     console.log("rendered")
 
     return (
         <div className='feed'>
+            
             <div className='feed_left'>
                 {/* <div className='stories'></div> */}
                 <AddPost/>

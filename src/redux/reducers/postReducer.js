@@ -85,10 +85,9 @@ export const postReducer = (state = initialState, action) => {
             obj.id = val++
             obj.desc = action.desc
             obj.img = action.file
-            console.log(obj)
             state.unshift(obj);
             console.log(state)
-            return state;
+            return state.map(el=> el)
         default:
             return state;
     }
