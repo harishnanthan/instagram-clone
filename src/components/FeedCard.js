@@ -81,7 +81,7 @@ const FeedCard = ({ post }) => {
                 </div>
                 <div className='view_comments'>
                     {comments.map((el, index) => {
-                        return <p key={index} className="comments" >{el}</p>
+                        return <p key={index} className="comments" ><strong>harishnanthans</strong> {el}</p>
                     })}
                     <p>{comments.length}</p>
                 </div>
