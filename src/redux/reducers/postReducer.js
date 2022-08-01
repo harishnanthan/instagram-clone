@@ -66,10 +66,16 @@ export const postReducer = (state = initialState, action) => {
                 return { ...el }
             })
         case "POSTSEARCH":
-            const value = action.searchQuery.toLowerCase()
-            return state.filter(item => {
-                 return item.userName.toLowerCase().includes(value)
-            })
+            if (action.searchQuery === ""){
+                return state
+            }
+            else{
+                const value = action.searchQuery.toLowerCase()
+                    return state.filter(item => {
+                    return item.userName.toLowerCase().includes(value)
+                })
+            }
+            
         case "CREATEPOST":
             let obj = {
                     id: null,

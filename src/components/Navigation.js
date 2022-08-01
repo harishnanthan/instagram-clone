@@ -29,6 +29,8 @@ export default function Navigation() {
                 [name]: value
             }
         })
+        // console.log(FormData.search)
+        dispatch(POSTSEARCH(fromData.search))
     }
 
     
