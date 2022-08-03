@@ -1,5 +1,5 @@
 import React, { useRef, useState} from 'react'
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom'
 import { LOGIN } from '../redux/actions/loginActions';
 
@@ -31,7 +31,7 @@ export default function Login() {
         event.preventDefault();
         if (formData.user === "test" && formData.password === "test"){
             dispatch(LOGIN())
-            navigate("/home", { replace: false })
+            navigate("/", { replace: false })
         }
         else
             errorDiv.current.innerHTML = 'There was a problem logging you into Instagram. Please try again soon.';
@@ -53,13 +53,13 @@ export default function Login() {
                         <div className='or'>OR</div>
                         <div className='liwf'><a href='https://www.facebook.com'>Log in with Facebook</a></div>
                         <div className='error_message' ref={errorDiv} ></div>
-                        <div className='fb'><a href=''>Forgotten your password?</a></div>
+                        <div className='fb'><a href='/forgot'>Forgotten your password?</a></div>
                     </form>
                 </div>
                 <div className='signup-box'>Don't have an account? <Link to="/signup">Sign up</Link></div>
                 <div className='gta'>
-                    <img src='https://www.instagram.com/static/images/appstore-install-badges/badge_ios_english-en.png/180ae7a0bcf7.png'></img>
-                    <img src='https://www.instagram.com/static/images/appstore-install-badges/badge_android_english-en.png/e9cd846dc748.png'></img>
+                    <img src='https://www.instagram.com/static/images/appstore-install-badges/badge_ios_english-en.png/180ae7a0bcf7.png' alt='playstore'></img>
+                    <img src='https://www.instagram.com/static/images/appstore-install-badges/badge_android_english-en.png/e9cd846dc748.png' alt='appstore'></img>
                 </div>
             </div>
         </div>

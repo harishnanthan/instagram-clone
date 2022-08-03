@@ -2,7 +2,8 @@ import React, { useEffect, useRef } from 'react'
 import { useDispatch } from 'react-redux'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { DELETEPOST, TOGGLEDOTS } from '../redux/actions/postActions'
+import { DELETEPOST } from '../redux/actions/postActions'
+import { HIDEMODEL } from '../redux/actions/showActions';
 
 function PostModel({ id }) {
   const postModel = useRef()
@@ -20,7 +21,7 @@ function PostModel({ id }) {
     <div className='postModel active' ref={postModel}>
       <div className='post__center'>
         <button className='postModel__delete' onClick={() => dispatch(DELETEPOST(id))}>Delete</button>
-        <button className='postModel__close' onClick={() => dispatch(TOGGLEDOTS(id))}>Close</button>
+        <button className='postModel__close' onClick={() => dispatch(HIDEMODEL())}>Close</button>
       </div>
       <ToastContainer />
     </div>

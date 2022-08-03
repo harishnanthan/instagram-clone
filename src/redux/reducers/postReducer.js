@@ -7,7 +7,7 @@ const initialState = [
         desc: "Every brand needs an appealing user Interface design to stand out in the market and that's what we are here to do.⚡️",
         comments: [],
         time: "1 day ago",
-        show: false
+        // show: false
     },
     {
         id: 2,
@@ -17,7 +17,7 @@ const initialState = [
         desc: "orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been",
         comments: [],
         time: "1 month ago",
-        show: false
+        // show: false
     },
     {
         id: 3,
@@ -27,7 +27,7 @@ const initialState = [
         desc: "readable Content here, content here",
         comments: [],
         time: "1 year ago",
-        show: false
+        // show: false
     },
 ]
 

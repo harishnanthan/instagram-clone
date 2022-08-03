@@ -1,30 +1,40 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import FeedCard from './FeedCard'
+// import PostModel from "./PostModel";
 // import { MemoizedFeedCard } from '../components/FeedCard'
 import AddPost from './AddPost'
 import SuggestionUser from './SuggestionUser'
 import User from './User'
 
 export default function Feed() {
+    const value = useSelector(state => state.post)
+    console.log("VALUE",value)
+    const [post, setPost] = useState(JSON.parse(localStorage.getItem('post')) || value)
+    console.log("POST",post)
 
-    const data = useSelector(state => state.post)
-    console.log(data)
+    useEffect(() => {   
+        return()=>{
+            console.log("USEEFFECT")
+            setPost(value)
+            localStorage.setItem('post', JSON.stringify(post));
+            console.log("done")
+        }
+    }, [value,post]);
 
     const arrayForUser = [1, 2, 3]
 
-    console.log("rendered")
 
     return (
         <div className='feed'>
-            
+            {/* {show ? <PostModel/> : null} */}
             <div className='feed_left'>
                 {/* <div className='stories'></div> */}
-                <AddPost/>
+                <AddPost />
                 <div className='feed_contents'>
                     {
-                        data.map((el,index) => (
+                        post.map((el, index) => (
                             <FeedCard key={index} post={el} />
                         ))
                     }
